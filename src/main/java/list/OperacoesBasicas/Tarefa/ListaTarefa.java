@@ -2,10 +2,11 @@ package main.java.list.OperacoesBasicas.Tarefa;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ListaTarefa {
     // Atributo
-    private List<Tarefa> tarefas;
+    private final List<Tarefa> tarefas;
 
     public ListaTarefa() {
         this.tarefas = new ArrayList<>();
@@ -34,7 +35,7 @@ public class ListaTarefa {
         StringBuilder descricaoTarefas = new StringBuilder("Descrições");
 
         for (Tarefa tarefa : tarefas) {
-            descricaoTarefas.append("\n").append(tarefa);
+            descricaoTarefas.append("\n").append(tarefa.getDescricao());
         }
         return descricaoTarefas;
     }
