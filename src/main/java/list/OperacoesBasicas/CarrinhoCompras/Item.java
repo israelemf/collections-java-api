@@ -29,9 +29,8 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item: " +
-                "\nDescrição: " + descricao +
-                "\nPreço: " + NumberFormat.getCurrencyInstance().format(new DecimalFormat("#,###,##0.00").format(preco)) +
+        return "\nDescrição: " + descricao +
+                "\nPreço: " + NumberFormat.getCurrencyInstance().format(preco) +
                 "\nQuantidade=" + quantidade;
     }
 }

@@ -19,7 +19,7 @@ public class CarrinhoDeCompras {
         itens.add(new Item(nome, preco, quantidade));
     }
 
-    public void removerItem() {
+    public void removerItem(String descricao) {
         List<Item> itensRemover = new ArrayList<>();
 
         for (Item item : itens) {
@@ -37,14 +37,14 @@ public class CarrinhoDeCompras {
             valorTotal = valorTotal.add(item.getPreco().multiply(new BigDecimal(item.getQuantidade())));
         }
 
-        return NumberFormat.getCurrencyInstance().format(new DecimalFormat("#,###,##0.00").format(valorTotal));
+        return NumberFormat.getCurrencyInstance().format(valorTotal);
     }
 
-    public StringBuilder obterInformacaoItem() {
-        StringBuilder informacoesItem = new StringBuilder("\nInformações dos itens");
+    public StringBuilder obterInformacaoCarrinho() {
+        StringBuilder informacoesItem = new StringBuilder("\nItens no carrinho");
 
         for (Item item : itens) {
-            informacoesItem.append("\n\n").append(item);
+            informacoesItem.append("\n").append(item);
         }
 
         return informacoesItem;
