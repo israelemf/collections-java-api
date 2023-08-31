@@ -28,6 +28,15 @@ public class Pessoa implements Comparable<Pessoa>{
     public double getAltura() {
         return altura;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", altura=" + altura +
+                '}';
+    }
 }
 
 class ComparatorPorAltura implements Comparator<Pessoa> {
