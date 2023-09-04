@@ -1,4 +1,4 @@
-package main.java.set.ConjuntoPalavrasUnicas;
+package main.java.set.OperacoesBasicas.ConjuntoPalavrasUnicas;
 
 public class Main {
     public static void main(String[] args) {

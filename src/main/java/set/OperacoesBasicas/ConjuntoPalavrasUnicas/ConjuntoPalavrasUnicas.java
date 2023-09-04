@@ -1,4 +1,4 @@
-package main.java.set.ConjuntoPalavrasUnicas;
+package main.java.set.OperacoesBasicas.ConjuntoPalavrasUnicas;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -37,8 +37,6 @@ public class ConjuntoPalavrasUnicas {
         } else {
             System.out.println("A palavra " + palavraVerificar + " não existe no HashSet");
         }
-
-
     }
 
     public void exibirPalavrasUnicas() {

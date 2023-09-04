@@ -1,4 +1,4 @@
-package main.java.set.ConjuntoConvidado;
+package main.java.set.OperacoesBasicas.ConjuntoConvidado;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package main.java.set.ConjuntoConvidado;
+package main.java.set.OperacoesBasicas.ConjuntoConvidado;
 
 public class Main {
     public static void main(String[] args) {
