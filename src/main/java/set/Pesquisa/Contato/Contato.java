@@ -11,19 +11,6 @@ public class Contato {
         this.numero = numero;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Contato contato = (Contato) o;
-        return Objects.equals(nome, contato.nome);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(nome);
-    }
-
     public String getNome() {
         return nome;
     }
@@ -37,10 +24,23 @@ public class Contato {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contato contato = (Contato) o;
+        return Objects.equals(nome, contato.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome);
+    }
+
+    @Override
     public String toString() {
         return "Contato{" +
                 "nome='" + nome + '\'' +
                 ", numero='" + numero + '\'' +
-                '}';
+                '}' + "\n";
     }
 }
