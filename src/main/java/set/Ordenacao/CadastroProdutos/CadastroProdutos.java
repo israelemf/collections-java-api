@@ -17,12 +17,19 @@ public class CadastroProdutos {
         produtosSet.add(new Produto(codigo, nome, preco, quantidade));
     }
 
+    public Set<Produto> exibirProdutos() {
+        return produtosSet;
+    }
+
     public Set<Produto> exibirProdutosPorNome() {
         // O TreeSet permite que a gente organize os dados.
-        return new TreeSet<>(produtosSet);
+        Set<Produto> produtosPorNome = new TreeSet<>(produtosSet);
+        return produtosPorNome;
     }
 
     public Set<Produto> exibirProdutosPorPreco() {
-        return new TreeSet<>(new CompararPorPreco());
+        Set<Produto> produtosPorPreco = new TreeSet<>(new CompararPorPreco());
+        produtosPorPreco.addAll(produtosSet);
+        return produtosPorPreco;
     }
 }
