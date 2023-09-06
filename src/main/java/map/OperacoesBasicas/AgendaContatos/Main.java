@@ -18,7 +18,5 @@ public class Main {
         agendaContatos.exibirContatos();
 
         System.out.println(agendaContatos.pesquisarPorNome("Jennifer"));
-
-
     }
 }
