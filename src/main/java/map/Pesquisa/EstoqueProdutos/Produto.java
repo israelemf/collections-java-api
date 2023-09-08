@@ -50,6 +50,6 @@ public class Produto {
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
                 ", quantidade=" + quantidade +
-                '}';
+                '}' + "\n";
     }
 }

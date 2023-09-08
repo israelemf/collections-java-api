@@ -6,7 +6,7 @@ import java.util.Map;
 public class EstoqueProdutos {
     private final Map<Long, Produto> produtos;
 
-    public EstoqueProdutos(Map<Long, Produto> produtos) {
+    public EstoqueProdutos() {
         this.produtos = new HashMap<>();
     }
 
@@ -36,6 +36,7 @@ public class EstoqueProdutos {
         if (!produtos.isEmpty()) {
             for (Produto produto : produtos.values()) {
                 if (produto.getPreco() > maiorPreco) {
+                    maiorPreco = produto.getPreco();
                     produtoMaisCaro = produto;
                 }
             }
@@ -50,6 +51,7 @@ public class EstoqueProdutos {
         if (!produtos.isEmpty()) {
             for (Produto produto : produtos.values()) {
                 if (produto.getPreco() < menorPreco) {
+                    menorPreco = produto.getPreco();
                     produtoMaisBarato = produto;
                 }
             }
@@ -64,6 +66,7 @@ public class EstoqueProdutos {
         if (!produtos.isEmpty()) {
             for (Produto produto : produtos.values()) {
                 if (produto.getQuantidade() * produto.getPreco() > maiorPrecoEstoque) {
+                    maiorPrecoEstoque = produto.getQuantidade() * produto.getPreco();
                     produtoMaisCaroEmEstoque = produto;
                 }
             }
